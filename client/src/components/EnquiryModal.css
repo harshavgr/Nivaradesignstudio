@@ -1,0 +1,150 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(19, 29, 48, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 100;
+}
+
+.modal-panel {
+  position: relative;
+  background: var(--white);
+  max-width: 560px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 44px;
+  border-radius: var(--radius);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--navy);
+  padding: 6px;
+}
+
+.modal-panel h3 {
+  font-size: 28px;
+  margin-top: 12px;
+}
+
+.modal-subtitle {
+  color: var(--text-body);
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.enquiry-form {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  padding: 12px 14px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  background: var(--cream);
+  color: var(--navy);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+  background: var(--white);
+}
+
+.enquiry-form .btn {
+  margin-top: 6px;
+  align-self: flex-start;
+}
+
+.form-error {
+  color: #b3413a;
+  font-size: 13px;
+}
+
+.form-error-block {
+  background: #fbeeec;
+  border: 1px solid #f0d3cf;
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+
+.form-error-alt {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--navy);
+}
+
+.form-error-alt a {
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+.modal-success h3 {
+  font-size: 30px;
+  margin-top: 14px;
+}
+
+.modal-success p {
+  margin-top: 12px;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+.modal-success .btn {
+  margin-top: 24px;
+}
+
+@media (max-width: 560px) {
+  .modal-panel {
+    padding: 32px 22px;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+}
